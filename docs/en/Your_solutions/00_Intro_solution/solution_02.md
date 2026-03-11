@@ -1,9 +1,9 @@
 # Solving Systems of Equations
 
 ## The Problem
-Find the values of $x$ and $y$ that satisfy:
-1. $2x + 3y = 12$
-2. $x - y = 1$
+
+Find the values of $x$ and $y$ that satisfy both equations: $2x + 3y = 12$ and $x - y = 1$.
+
 
 ## Method: Substitution
 
