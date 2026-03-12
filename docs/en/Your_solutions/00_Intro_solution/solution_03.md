@@ -32,3 +32,11 @@ F_{new} = \frac{1}{4} \cdot \frac{1}{4} \cdot \left( G \frac{m_1 m_2}{r^2} \righ
 $$
 
 **4. Final Relation**
+
+$$
+F_{new} = \frac{1}{16} F_{old}
+$$
+
+## Conclusion
+If the distance is doubled and both masses are halved, the gravitational force changes by a factor of **1/16**.
+
