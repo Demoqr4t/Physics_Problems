@@ -1,52 +1,36 @@
-To solve this system of equations, we can use the **Substitution Method** or the **Elimination Method**. Let's use elimination, as it is often the quickest way to find the variables.
+# Mathematical Problem Solving: Systems of Equations
 
-### Given Equations:
+## 1. Core Definitions and Formulas
 
-1. $2x + 3y = 12$
-2. $x - y = 1$
+Before solving the problem, it is important to understand the fundamental concepts used in the process.
 
----
+* **System of Linear Equations:** A set of two or more linear equations involving the same set of variables. The solution is the specific values of the variables that make all equations in the system true simultaneously.
+* **The Elimination Method (Addition Method):** A technique used to solve systems of equations by adding or subtracting the equations to "eliminate" one variable. This is usually achieved by multiplying one or both equations by a constant so that the coefficients of one variable are opposites (e.g., $3y$ and $-3y$).
+* **The Intersection Point:** Graphically, the solution $(x, y)$ represents the exact point where the two lines cross on a coordinate plane.
 
-### Step 1: Align the equations
+### The General Linear Form
+A linear equation in two variables is typically written as:
 
-To eliminate $y$, we can multiply the second equation by **3** so that the coefficients of $y$ are opposites ($+3$ and $-3$).
-
-$$3(x - y) = 3(1)$$
-
-$$3x - 3y = 3$$
-
-### Step 2: Add the equations together
-
-Now, add the modified second equation to the first equation:
-
-$$(2x + 3y) + (3x - 3y) = 12 + 3$$
-
-$$5x = 15$$
-
-### Step 3: Solve for $x$
-
-Divide both sides by 5:
-
-
-$$x = 3$$
-
-### Step 4: Solve for $y$
-
-Substitute $x = 3$ back into the original second equation ($x - y = 1$):
-
-$$3 - y = 1$$
-
-$$-y = 1 - 3$$
-
-$$-y = -2$$
-
-$$y = 2$$
+$$
+ax + by = c
+$$
 
 ---
 
-### Final Answer:
+## 2. Problem Statement
 
-The solution to the system is:
-**$x = 3, y = 2$**
+Find the values of $x$ and $y$ that satisfy both of the following equations:
 
-(Or written as a coordinate point: **$(3, 2)$**)
+1.  $2x + 3y = 12$
+2.  $x - y = 1$
+
+---
+
+## 3. Step-by-Step Solution
+
+We will use the **Elimination Method** to solve this system.
+
+### Step 1: Align and Adjust the Equations
+To eliminate $y$, the coefficients of $y$ in both equations must be opposites. 
+* Equation 1 has $+3y$. 
+* Equation
