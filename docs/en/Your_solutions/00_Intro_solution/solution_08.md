@@ -1,46 +1,56 @@
-**# Definite Integral Calculation
+# Solving Systems of Equations
 
-## Problem Statement
-Calculate the area under the curve of the function $f(x) = \sin(x)$ from $x=0$ to $x=\pi$.
+## The Problem
 
-## Necessary Formulas
+Find the values of $x$ and $y$ that satisfy both equations: $2x + 3y = 12$ and $x - y = 1$.
+
+
+## Method: Substitution
+
+**Step 1: Isolate $x$ in the second equation**
 
 $$
-\int_{a}^{b} f(x) \, dx = F(b) - F(a)
-$$
-
-$$
-\int \sin(x) \, dx = -\cos(x) + C
-$$
-
-## Solution
-
-1. **Setup:**
-   
-$$
-A = \int_{0}^{\pi} \sin(x) \, dx
+x = y + 1
 $$
 
-2. **Antiderivative:**
-   
+**Step 2: Substitute the expression into the first equation**
+
 $$
-A = [-\cos(x)]_{0}^{\pi}
+2(y + 1) + 3y = 12
 $$
 
-3. **Evaluation:**
-   
+**Step 3: Simplify and solve for $y$**
+
 $$
-A = (-\cos(\pi)) - (-\cos(0))
+2y + 2 + 3y = 12
 $$
 
 $$
-A = (-(-1)) - (-1)
+5y + 2 = 12
 $$
 
-4. **Final Result:**
-   
 $$
-A = 1 + 1 = 2
+5y = 10
 $$
 
-**
+$$
+y = 2
+$$
+
+**Step 4: Use the value of $y$ to find $x$**
+
+$$
+x = 2 + 1
+$$
+
+$$
+x = 3
+$$
+
+## Final Answer
+The solution is:
+
+$$
+x = 3, y = 2
+$$
+
