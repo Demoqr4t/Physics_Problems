@@ -1,36 +1,56 @@
-# Mathematical Problem Solving: Systems of Equations
+# Solving Systems of Equations
 
-## 1. Core Definitions and Formulas
+## The Problem
 
-Before solving the problem, it is important to understand the fundamental concepts used in the process.
+Find the values of $x$ and $y$ that satisfy both equations: $2x + 3y = 12$ and $x - y = 1$.
 
-* **System of Linear Equations:** A set of two or more linear equations involving the same set of variables. The solution is the specific values of the variables that make all equations in the system true simultaneously.
-* **The Elimination Method (Addition Method):** A technique used to solve systems of equations by adding or subtracting the equations to "eliminate" one variable. This is usually achieved by multiplying one or both equations by a constant so that the coefficients of one variable are opposites (e.g., $3y$ and $-3y$).
-* **The Intersection Point:** Graphically, the solution $(x, y)$ represents the exact point where the two lines cross on a coordinate plane.
 
-### The General Linear Form
-A linear equation in two variables is typically written as:
+## Method: Substitution
+
+**Step 1: Isolate $x$ in the second equation**
 
 $$
-ax + by = c
+x = y + 1
 $$
 
----
+**Step 2: Substitute the expression into the first equation**
 
-## 2. Problem Statement
+$$
+2(y + 1) + 3y = 12
+$$
 
-Find the values of $x$ and $y$ that satisfy both of the following equations:
+**Step 3: Simplify and solve for $y$**
 
-1.  $2x + 3y = 12$
-2.  $x - y = 1$
+$$
+2y + 2 + 3y = 12
+$$
 
----
+$$
+5y + 2 = 12
+$$
 
-## 3. Step-by-Step Solution
+$$
+5y = 10
+$$
 
-We will use the **Elimination Method** to solve this system.
+$$
+y = 2
+$$
 
-### Step 1: Align and Adjust the Equations
-To eliminate $y$, the coefficients of $y$ in both equations must be opposites. 
-* Equation 1 has $+3y$. 
-* Equation
+**Step 4: Use the value of $y$ to find $x$**
+
+$$
+x = 2 + 1
+$$
+
+$$
+x = 3
+$$
+
+## Final Answer
+The solution is:
+
+$$
+x = 3, y = 2
+$$
+
