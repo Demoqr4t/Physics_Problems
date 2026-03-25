@@ -1,136 +1,61 @@
 # 7. Elimination of Time and Interpretation of Acceleration
 
-This guide explains how to convert parametric equations of motion into a path equation and how to break down acceleration into its physical components.
+This document provides a detailed walkthrough of solving parametric motion equations, finding the trajectory, and analyzing velocity and acceleration.
 
 ---
 
 ## 1. Key Definitions and Formulas
 
-### Parametric Equations
-Motion is often described by separate functions for each coordinate:
+Before solving the problem, we must establish the mathematical tools required:
 
+### Position Vector ($\vec{r}$)
+The position of a particle in a 2D plane is given by:
 $$
-x = x(t), \quad y = y(t)
-$$
-
-### Elimination of Time (Path Equation)
-To find the trajectory $y = f(x)$, we solve the $x(t)$ equation for $t$ and substitute it into $y(t)$. This "eliminates" the time variable to show the geometric shape of the path.
-
-### Velocity and Acceleration Vectors
-The velocity vector $\vec{v}$ and acceleration vector $\vec{a}$ are found by differentiating the position components:
-
-$$
-\vec{v} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j}
+\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j}
 $$
 
+### Velocity ($\vec{v}$)
+Velocity is the first derivative of position with respect to time ($t$):
 $$
-\vec{a} = \frac{dv_x}{dt}\hat{i} + \frac{dv_y}{dt}\hat{j}
+\vec{v}(t) = \frac{d\vec{r}}{dt} = \dot{x}(t)\hat{i} + \dot{y}(t)\hat{j}
+$$
+The **magnitude** (speed) is calculated using the Pythagorean theorem:
+$$
+|\vec{v}(t)| = \sqrt{v_x^2 + v_y^2}
 $$
 
-### Tangential and Normal Acceleration
-Acceleration can be interpreted as having two components:
-1. **Tangential ($a_t$):** Changes the **speed** (magnitude of velocity).
-2. **Normal ($a_n$):** Changes the **direction** of motion.
+### Acceleration ($\vec{a}$)
+Acceleration is the first derivative of velocity (or the second derivative of position) with respect to time ($t$):
+$$
+\vec{a}(t) = \frac{d\vec{v}}{dt} = \ddot{x}(t)\hat{i} + \ddot{y}(t)\hat{j}
+$$
+The **magnitude** is:
+$$
+|\vec{a}(t)| = \sqrt{a_x^2 + a_y^2}
+$$
 
-$$
-a_t = \frac{d|\vec{v}|}{dt}, \quad a_n = \sqrt{|\vec{a}|^2 - a_t^2}
-$$
+### Constant vs. Variable Acceleration
+Acceleration is **constant** if and only if both its magnitude and direction do not change over time (i.e., the expression for $\vec{a}(t)$ contains no $t$ terms).
 
 ---
 
-## 2. Example Problem
+## 2. Problem Statement
 
-**Given Equations:**
-
-$$
-x(t) = 2t
-$$
+Given the parametric equations:
 
 $$
-y(t) = t^2
+x(t) = 2t^2
 $$
 
-**Goal:** Eliminate time to find the path equation and interpret the acceleration.
+$$
+y(t) = 3t^3
+$$
+
+Find the path equation, calculate kinematic vectors, and determine if acceleration is constant.
 
 ---
 
 ## 3. Step-by-Step Solution
 
-### Step 1: Eliminate the Time Variable ($t$)
-First, we isolate $t$ from the $x$ equation:
-
-$$
-x = 2t \implies t = \frac{x}{2}
-$$
-
-Now, substitute this expression for $t$ into the $y$ equation:
-
-$$
-y = \left( \frac{x}{2} \right)^2
-$$
-
-$$
-y = \frac{1}{4}x^2
-$$
-
-> **Interpretation:** The path of the object is a **parabola** opening upwards.
-
----
-
-### Step 2: Find the Velocity Vector $\vec{v}(t)$
-Differentiate the position components with respect to time:
-
-$$
-v_x = \frac{dx}{dt} = 2
-$$
-
-$$
-v_y = \frac{dy}{dt} = 2t
-$$
-
-The velocity vector is $\vec{v}(t) = (2, 2t)$. The speed (magnitude) is:
-
-$$
-|\vec{v}| = \sqrt{2^2 + (2t)^2} = \sqrt{4 + 4t^2} = 2\sqrt{1 + t^2}
-$$
-
----
-
-### Step 3: Find the Acceleration Vector $\vec{a}(t)$
-Differentiate the velocity components:
-
-$$
-a_x = \frac{dv_x}{dt} = 0
-$$
-
-$$
-a_y = \frac{dv_y}{dt} = 2
-$$
-
-> **Interpretation:** The acceleration is constant, $\vec{a} = (0, 2)$. It points entirely in the positive y-direction.
-
----
-
-### Step 4: Interpret Acceleration Components
-We find the tangential acceleration by differentiating the speed:
-
-$$
-a_t = \frac{d}{dt}(2\sqrt{1+t^2}) = 2 \cdot \frac{1}{2\sqrt{1+t^2}} \cdot 2t = \frac{2t}{\sqrt{1+t^2}}
-$$
-
-The normal acceleration is found using the Pythagorean relationship:
-
-$$
-a_n = \sqrt{|\vec{a}|^2 - a_t^2} = \sqrt{2^2 - \left( \frac{2t}{\sqrt{1+t^2}} \right)^2}
-$$
-
----
-
-## 4. Final Results Summary
-
-| Concept | Result |
-| :--- | :--- |
-| **Path Equation** | $y = \frac{1}{4}x^2$ (Parabolic) |
-| **Velocity Vector** | $\vec{v} = 2\hat{i} + 2t\hat{j}$ |
-| **Acceleration Vector** | $\vec{a} = 0\hat{i} + 2\hat{j}$ |
-| **Interpretation** | The object accelerates vertically, changing both speed and direction. |
+### Step 1: Eliminate the Parameter $t$
+To find the relationship between $y$ and $x$, we solve for $t$ in the $
