@@ -1,117 +1,255 @@
-# Problem 6: Variable Velocity
+# Variable Velocity Problem Analysis
 
-We are given the velocity function $v(t)=t^2+2t-5$ and the initial position $x(0)=4$.
-
-We want:
-
-1. The position at $t=3$, i.e. $x(3)$.
-2. The acceleration at $t=3$, i.e. $a(3)$.
+This document provides a step-by-step solution for calculating the position and acceleration of an object with a time-dependent velocity function.
 
 ---
 
-## 1) Position from velocity theory
+## 1. Key Definitions and Formulas
 
-Velocity is the derivative of position:
+To solve problems involving variable velocity, we use the fundamental principles of calculus:
 
-$$
-v(t)=\frac{dx}{dt}
-$$
-
-So:
+### Acceleration ($a$)
+Acceleration is defined as the instantaneous rate of change of velocity with respect to time. Mathematically, it is the first derivative of the velocity function:
 
 $$
-\frac{dx}{dt}=t^2+2t-5
+a(t) = \frac{dv}{dt} = v'(t)
 $$
 
-Integrate both sides with respect to $t$:
+### Position ($x$)
+Position is the integral of velocity with respect to time. Because integration produces a constant ($C$), we use initial conditions (the starting position) to find the specific position function:
 
 $$
-x(t)=\int (t^2+2t-5)\,dt
-$$
-
-Compute the integral term-by-term:
-
-$$
-\int t^2\,dt=\frac{t^3}{3},\qquad
-\int 2t\,dt=t^2,\qquad
-\int (-5)\,dt=-5t
-$$
-
-So the general position function is:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+C
-$$
-
-Use the initial condition $x(0)=4$:
-
-$$
-x(0)=\frac{0^3}{3}+0^2-5\cdot 0 + C = C = 4
-$$
-
-Therefore:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+4
-$$
-
-Now evaluate at $t=3$:
-
-$$
-x(3)=\frac{3^3}{3}+3^2-5\cdot 3+4
-=\frac{27}{3}+9-15+4
-=9+9-15+4
-$$
-
-Compute:
-$$
-9+9=18,\qquad 18-15=3,\qquad 3+4=7
-$$
-
-So:
-
-$$
-x(3)=7
+x(t) = \int v(t) \, dt + C
 $$
 
 ---
 
-## 2) Acceleration from velocity
+## 2. Problem Statement
 
-Acceleration is the derivative of velocity:
-
-$$
-a(t)=\frac{dv}{dt}
-$$
-
-Differentiate:
+Given the velocity function:
 
 $$
-v(t)=t^2+2t-5
-\quad\Rightarrow\quad
-a(t)=2t+2
+v(t) = t^2 + 2t - 5
 $$
 
-Evaluate at $t=3$:
+**Initial Conditions:**
+* At $t = 0$, the position $x = 4$.
+
+**Goal:**
+* Find the **acceleration** at $t = 3$.
+* Find the **position** at $t = 3$.
+
+---
+
+## 3. Step-by-Step Solution
+
+### Step 1: Calculate Acceleration $a(t)$
+We differentiate the velocity function $v(t) = t^2 + 2t - 5$.
 
 $$
-a(3)=2\cdot 3 + 2 = 8
+a(t) = \frac{d}{dt}(t^2 + 2t - 5)
+$$
+
+Applying the power rule ($d/dx[x^n] = nx^{n-1}$):
+
+$$
+a(t) = 2t + 2
+$$
+
+**Calculation for $t = 3$:**
+
+$$
+a(3) = 2(3) + 2 = 8
+$$
+
+> **Result:** The acceleration at $t = 3$ is **8 units/s²**.
+
+---
+
+### Step 2: Find the General Position Function $x(t)$
+We integrate the velocity function to move from velocity back to position.
+
+$$
+x(t) = \int (t^2 + 2t - 5) \, dt
+$$
+
+Performing the integration:
+
+$$
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + C
 $$
 
 ---
 
-## Final answers
+### Step 3: Solve for the Constant $C$
+We use the initial condition: when $t = 0$, $x = 4$.
 
 $$
-x(3)=7
+4 = \frac{1}{3}(0)^3 + (0)^2 - 5(0) + C
 $$
 
 $$
-a(3)=8
+4 = 0 + 0 - 0 + C \implies C = 4
+$$
+
+The specific position function is:
+
+$$
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4
 $$
 
 ---
 
-## Plot the velocity and acceleration
+### Step 4: Calculate Position at $t = 3$
+Substitute $t = 3$ into our specific position function:
 
-![Velocity and Acceleration Plots](velocity_acceleration_plots.png)
+$$
+x(3) = \frac{1}{3}(3)^3 + (3)^2 - 5(3) + 4
+$$
+
+$$
+x(3) = \frac{1}{3}(27) + 9 - 15 + 4
+$$
+
+$$
+x(3) = 9 + 9 - 15 + 4 = 7
+$$
+
+> **Result:** The position at $t = 3$ is **7 units**.
+
+---
+
+## 4. Final Results Summary
+
+| Parameter | Function | Value at $t = 3$ |
+| :--- | :--- | :--- |
+| **Velocity** | $v(t) = t^2 + 2t - 5$ | $10$ |
+| **Acceleration** | $a(t) = 2t + 2$ | **8** |
+| **Position** | $x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4$ | **7** |# Variable Velocity Problem Analysis
+
+This document provides a step-by-step solution for calculating the position and acceleration of an object with a time-dependent velocity function.
+
+---
+
+## 1. Key Definitions and Formulas
+
+To solve problems involving variable velocity, we use the fundamental principles of calculus:
+
+### Acceleration ($a$)
+Acceleration is defined as the instantaneous rate of change of velocity with respect to time. Mathematically, it is the first derivative of the velocity function:
+
+$$
+a(t) = \frac{dv}{dt} = v'(t)
+$$
+
+### Position ($x$)
+Position is the integral of velocity with respect to time. Because integration produces a constant ($C$), we use initial conditions (the starting position) to find the specific position function:
+
+$$
+x(t) = \int v(t) \, dt + C
+$$
+
+---
+
+## 2. Problem Statement
+
+Given the velocity function:
+
+$$
+v(t) = t^2 + 2t - 5
+$$
+
+**Initial Conditions:**
+* At $t = 0$, the position $x = 4$.
+
+**Goal:**
+* Find the **acceleration** at $t = 3$.
+* Find the **position** at $t = 3$.
+
+---
+
+## 3. Step-by-Step Solution
+
+### Step 1: Calculate Acceleration $a(t)$
+We differentiate the velocity function $v(t) = t^2 + 2t - 5$.
+
+$$
+a(t) = \frac{d}{dt}(t^2 + 2t - 5)
+$$
+
+Applying the power rule ($d/dx[x^n] = nx^{n-1}$):
+
+$$
+a(t) = 2t + 2
+$$
+
+**Calculation for $t = 3$:**
+
+$$
+a(3) = 2(3) + 2 = 8
+$$
+
+> **Result:** The acceleration at $t = 3$ is **8 units/s²**.
+
+---
+
+### Step 2: Find the General Position Function $x(t)$
+We integrate the velocity function to move from velocity back to position.
+
+$$
+x(t) = \int (t^2 + 2t - 5) \, dt
+$$
+
+Performing the integration:
+
+$$
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + C
+$$
+
+---
+
+### Step 3: Solve for the Constant $C$
+We use the initial condition: when $t = 0$, $x = 4$.
+
+$$
+4 = \frac{1}{3}(0)^3 + (0)^2 - 5(0) + C
+$$
+
+$$
+4 = 0 + 0 - 0 + C \implies C = 4
+$$
+
+The specific position function is:
+
+$$
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4
+$$
+
+---
+
+### Step 4: Calculate Position at $t = 3$
+Substitute $t = 3$ into our specific position function:
+
+$$
+x(3) = \frac{1}{3}(3)^3 + (3)^2 - 5(3) + 4
+$$
+
+$$
+x(3) = \frac{1}{3}(27) + 9 - 15 + 4
+$$
+
+$$
+x(3) = 9 + 9 - 15 + 4 = 7
+$$
+
+> **Result:** The position at $t = 3$ is **7 units**.
+
+---
+
+## 4. Final Results Summary
+
+| Parameter | Function | Value at $t = 3$ |
+| :--- | :--- | :--- |
+| **Velocity** | $v(t) = t^2 + 2t - 5$ | $10$ |
+| **Acceleration** | $a(t) = 2t + 2$ | **8** |
+| **Position** | $x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4$ | **7** |
